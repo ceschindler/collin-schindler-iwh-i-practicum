@@ -1,0 +1,19 @@
+doctype html
+html
+	head
+		title=`${title}`
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet", href="/css/style.css")
+	body
+		.form-wrapper
+			h1 Add a Cactus!
+			form(methdod="POST")
+				label(for="cactusName") Cactus name
+				input(type="text" name="cactusName" required)
+				label(for="cactusShape") Cactus shape
+				input(type="text" name="cactusShape")
+				label(for="cactusName") Blooming Habits
+				input(type="text" name="bloomingHabits")
+				input(type="submit" value="Create a new Cactus")
+				br
+				p Return to #[a(href="/") homepage]
