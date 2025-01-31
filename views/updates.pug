@@ -1,0 +1,28 @@
+doctype html
+html
+        head
+                title=`${title}`
+                meta(name="viewport" content="width=device-width, initial-scale=1")
+                link(rel="stylesheet", href="/css/style.css")
+        body
+                .form-wrapper
+                        if name && name.length !== 0
+                           h1 Update your Cactus
+                        else
+                           h1 Add a Cactus!
+                        form(method="POST" id="myForm")
+                                label(for="cactusName") Cactus name
+                                if name && name.length !== 0
+                                   input(type="text" name="cactusName" value="" + name required readonly)
+                                else
+                                   input(type="text" name="cactusName" required)
+                                label(for="cactusShape") Cactus shape
+                                input(type="text" name="cactusShape")
+                                label(for="cactusName") Blooming Habits
+                                input(type="text" name="bloomingHabits")
+                                if name && name.length !== 0
+                                   input(type="submit" value="Update Cactus")
+                                else
+                                   input(type="submit" value="Create a new Cactus")
+                                br
+                                p Return to #[a(href="/") homepage]
